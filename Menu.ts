@@ -1,12 +1,14 @@
 import prompt = require("readline-sync");
 import process = require('node:process');
+import { colors } from './src/util/Colors';
 export function main() {
 
     let opcao: number = 0;
 
-    console.log("*****************************************************\n");
+    while(true){
+    console.log(colors.bg.black, colors.fg.yellow,"*****************************************************\n");
     
-    console.log("*************** BANCO DO BRASIL COM Z ***************\n");
+    console.log("*************** BANCO DO BRASIL COM Z ***************");
     
     console.log("\n*****************************************************\n");
     
@@ -20,44 +22,55 @@ export function main() {
     console.log("8 - Transferir");
     console.log("9 - Sair");
     
-    console.log("\n*****************************************************");
+    console.log("\n*****************************************************", colors.reset);
     
     opcao = prompt.questionInt("Entre com a opcao desejada: ")
 
     if(opcao == 9) {
-        console.log("\nBanco do Brazil com Z - O seu Futuro começa aqui!");
+        console.log(colors.fg.greenstrong, "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
         finalizar()
+        console.log(colors.reset, "");
         process.exit()
     }
         switch(opcao){
             case 1:
-                console.log("\n\nCriar Conta\n\n");
+                console.log(colors.fg.whitestrong,"\n\nCriar Conta\n\n", colors.reset);
+                keyPress()
                 break;
             case 2:
-                console.log("\n\nListar todas as Contas\n\n");
+                console.log(colors.fg.whitestrong,"\n\nListar todas as Contas\n\n", colors.reset);
+                keyPress()
                 break;
             case 3:
-                console.log("\n\nConsultar dados da Conta - por número\n\n");
+                console.log(colors.fg.whitestrong,"\n\nConsultar dados da Conta - por número\n\n", colors.reset);
+                keyPress()
                 break;
             case 4:
-                console.log("\n\nAtualizar dados da Conta\n\n");
+                console.log(colors.fg.whitestrong,"\n\nAtualizar dados da Conta\n\n", colors.reset);
+                keyPress()
                 break;
             case 5:
-                console.log("\n\nApagar uma Conta\n\n");
+                console.log(colors.fg.whitestrong,"\n\nApagar uma Conta\n\n", colors.reset);
+                keyPress()
                 break;
             case 6:
-                console.log("\n\nSaque\n\n");
+                console.log(colors.fg.whitestrong,"\n\nSaque\n\n", colors.reset);
+                keyPress()
                 break;
             case 7:
-                console.log("\n\nDepósito\n\n");
+                console.log(colors.fg.whitestrong,"\n\nDepósito\n\n", colors.reset);
+                keyPress()
                 break;
             case 8:
-                console.log("\n\nTransferência entre Contas\n\n");
+                console.log(colors.fg.whitestrong,"\n\nTransferência entre Contas\n\n", colors.reset);
+                keyPress()
                 break;
             default:
-                console.log("\nOpção Inválida!\n");
+                console.log(colors.fg.whitestrong,"\nOpção Inválida!\n", colors.reset);
+                keyPress()
                 break;
         }
+    }
 
 } 
 
@@ -68,6 +81,12 @@ export function finalizar(): void{
     console.log("Alberto Duran - Generation Brasil");
     console.log("github.com/AlbertoDuranFilho/conta_bancaria");
     console.log("*****************************************************");
+}
+
+function keyPress(): void {
+    console.log(colors.reset, "");
+    console.log("Pressione enter para continuar...");
+    prompt.prompt();
 }
 
 main();
