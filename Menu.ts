@@ -7,14 +7,14 @@ export function main() {
 
     let opcao: number = 0;
 
-    const conta = new Conta(1, 123, 1, "Alberto", 9000);
+    const conta: Conta = new Conta(1, 123, 1, "Alberto", 9000);
     conta.visualizar();
     conta.sacar(10500);
     conta.visualizar();
     conta.depositar(3000);
     conta.visualizar();
 
-    const conta2 = new Conta(2, 123, 2, "Déborah", 1000);
+    const conta2: Conta = new Conta(2, 123, 2, "Déborah", 1000);
     conta2.visualizar();
     conta2.sacar(1500);
     conta2.visualizar();
