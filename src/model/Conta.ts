@@ -82,7 +82,7 @@ export class Conta{
 
        console.log(`\n\n****************************************************`);
        console.log(`Dados da conta:`)
-       console.log(`\n\n****************************************************`);
+       console.log(`****************************************************`);
        console.log(`Número da conta: ${this._numero}`)
        console.log(`Agência: ${tipo}`)
        console.log(`Titular: ${this._titular}`)
