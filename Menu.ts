@@ -2,24 +2,26 @@ import prompt = require("readline-sync");
 import process = require('node:process');
 import { colors } from './src/util/Colors';
 import { Conta } from './src/model/Conta'
+import { ContaPoupanca } from "./src/model/ContaPoupanca";
+import { ContaCorrente } from "./src/model/ContaCorrente";
 
 export function main() {
 
     let opcao: number = 0;
 
-    const conta: Conta = new Conta(1, 123, 1, "Alberto", 9000);
-    conta.visualizar();
-    conta.sacar(10500);
-    conta.visualizar();
-    conta.depositar(3000);
-    conta.visualizar();
+    const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Mariana", 15000, 1000);
+    contacorrente.visualizar();
+    contacorrente.sacar(2000);
+    contacorrente.visualizar();
+    contacorrente.depositar(1000);
+    contacorrente.visualizar();
 
-    const conta2: Conta = new Conta(2, 123, 2, "Déborah", 1000);
-    conta2.visualizar();
-    conta2.sacar(1500);
-    conta2.visualizar();
-    conta2.depositar(250);
-    conta2.visualizar();
+    const contapoupanca: ContaPoupanca = new ContaPoupanca(3, 123, 2, "Victor", 1000, 10);
+    contapoupanca.visualizar();
+    contapoupanca.sacar(200);
+    contapoupanca.visualizar();
+    contapoupanca.depositar(1000);
+    contapoupanca.visualizar();
 
     while(true){
     console.log(colors.bg.black, colors.fg.yellow,"\n*****************************************************\n");
