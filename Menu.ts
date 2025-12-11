@@ -121,8 +121,7 @@ export function main() {
                     console.log("Digite o nome do titular da conta: ")
                     titular = prompt.question("")
 
-                    console.log("Digite o tipo da conta: ")
-                    tipo = prompt.keyInSelect(tiposContas,  "", {cancel: false})+ 1;
+                    tipo = conta.tipo;
 
                     console.log("Digite o saldo da conta (R$): ")
                     saldo = prompt.questionFloat("")
