@@ -142,8 +142,9 @@ export function main() {
                                 saldo, aniversario))
                             break;
                     }
+                }else{
+                    console.log(`${colors.fg.red} \nA caneca de ID: ${numero} não foi encontrada! ${colors.reset}`);
                 }
-
                 keyPress()
                 break;
             case 5:

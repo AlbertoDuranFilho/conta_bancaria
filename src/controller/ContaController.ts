@@ -45,7 +45,7 @@ export class ContaController implements ContaRepository{
         let buscarConta = this.buscarNoArray(numero)
 
        if(buscarConta != null){
-        this.listaContas.slice(this.listaContas.indexOf(buscarConta), 1)
+        this.listaContas.splice(this.listaContas.indexOf(buscarConta), 1)
         console.log(`${colors.fg.green} \nA conta numero: ${numero} foi apagada com sucesso! ${colors.reset}`);
         
        } else{
