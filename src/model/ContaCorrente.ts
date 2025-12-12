@@ -16,15 +16,6 @@ export class ContaCorrente extends Conta{
         this._limite = limite;
     }
 
-    public sacar(valor: number): boolean{
-        if((this.saldo + this._limite) < valor){
-            console.log(`\nSalado insuficiente!`)
-            return false;
-        }
-        this.saldo = this.saldo - valor;
-        return true;
-    }
-
     public visualizar(): void {
         super.visualizar();
         console.log(`Limite: ${this._limite.toFixed(2)}`);
